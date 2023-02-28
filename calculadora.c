@@ -1,49 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <locale.h>
 
-int main (int argc, char *argv[]){
+int main () {
 
-int op;
-float n1, n2, res, soma, sub, div, mult;
+int op, loop, n1, n2;
+float res, soma, sub, div, mult;
 
+setlocale(LC_ALL, "Portuguese");
 
+while (loop == 1)
+{
+
+printf("*** CALCULADORA ***\n");
 printf("Escolha uma op.\n");
-printf("Digite 1 para somar.\n");
-printf("Digite 2 para subtrair.\n");
-printf("Digite 3 para multiplicar.\n");
-printf("Digite 4 para dividir.\n");
-scanf("/f", &op);
-
-printf("Escolha o valor n1");
-scanf("/d", &n1);
-
-printf("Escolha o valor n1");
-scanf("/d", &n2);
+printf("Digite 1 - para somar.\n 2 Digite 2 - para subtrair.\n 3 Digite 3 - para multiplicar.\n 4 Digite 4 - para dividir.\n 5 Sair");
+printf("\n Digite dois valores inteiros: \n");
+scanf("%d%*c", &n1);
+scanf("%d%*c", &n2);
+printf("\nSelecione a operação:\n");
+scanf("%d%*c", &op);
 
 
 switch (op){
          case 1:
         soma= n1 + n2;
-        printf("%f + %f = %f ", n1, n2, res);
+        printf("soma: %f.\n", res);
     break;
-        case 2:
-        sub= n1 - n2;
-        printf("%f + %f = %f ", n1, n2, sub);
+         case 2:
+        soma= n1 - n2;
+        printf("sub: %f.\n", res);
+         case 3:
+        soma= n1 / n2;
+        if(n2==0){
+            printf("Divisão por 0!\n");
+        } else{
+        printf("Div: %f.\n", res);
     break;
-        case 3:
-        div= n1 / n2;
-        printf("%f + %f = %f ", n1, n2, div);
-    break;
-        case 4:
-        mult= n1 * n2;
-        printf("%f + %f = %f ", n1, n2, mult);
+    }
+         case 4:
+        soma= n1 * n2;
+        printf("mult: %f.\n", res);
     break;
 
 default:
         printf("op invalida!\n");
     break;
 }
+    system("pause");
+    return 0;
 
-
-
+    }
 }
