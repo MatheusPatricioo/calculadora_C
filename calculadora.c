@@ -16,10 +16,10 @@ printf("*** CALCULADORA ***\n");
 printf("Escolha uma op.\n");
 printf("Digite 1 - para somar.\n 2 Digite 2 - para subtrair.\n 3 Digite 3 - para multiplicar.\n 4 Digite 4 - para dividir.\n 5 Sair");
 printf("\n Digite dois valores inteiros: \n");
-scanf("%d%*c", &n1);
-scanf("%d%*c", &n2);
+scanf("%d", &n1);
+scanf("%d", &n2);
 printf("\nSelecione a operação:\n");
-scanf("%d%*c", &op);
+scanf("%d", &op);
 
 
 switch (op){
@@ -53,9 +53,11 @@ default:
        res = 0;
        printf("Nenhuma operação valida %d\n", res);
 
-        }
+        
+        printf("\nPressione ENTER para continuar");
+        getchar();
+        } 
     }
-    system("pause");
+    
     return 0;
-
 }
