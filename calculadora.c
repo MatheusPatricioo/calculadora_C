@@ -16,7 +16,7 @@ int main()
         system("cls");
         printf("*** CALCULADORA ***\n");
         printf("Escolha uma op.\n");
-        printf("Digite 1 - para somar.\n 2 Digite 2 - para subtrair.\n 3 Digite 3 - para multiplicar.\n 4 Digite 4 - para dividir.\n 5 Sair");
+        printf(" Digite 1 - para somar.\n Digite 2 - para subtrair.\n Digite 3 - para multiplicar.\n Digite 4 - para dividir.\n Digite 5 - para Sair");
         printf("\n Digite dois valores inteiros: \n");
         scanf("%d", &n1);
         scanf("%d", &n2);
@@ -35,15 +35,10 @@ int main()
             break;
         case 3:
             mult = n1 * n2;
-            if (n2 == 0)
-            {
-                printf("Divisão por 0!\n");
-            }
-            else
-            {
+            
                 printf("Div: %f.\n", res);
                 break;
-            }
+            
         case 4:
             div = n1 / n2;
             printf("mult: %f.\n", res);
